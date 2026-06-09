@@ -943,8 +943,8 @@ header {
 }
 
 .team-avatar {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: var(--color-border);
   border: 2px solid var(--color-border);
@@ -961,17 +961,7 @@ header {
   overflow: hidden;
 }
 
-/* Initials fallback */
-.team-avatar::before {
-  content: attr(data-initials);
-}
-
-/* Hide initials once a photo has confirmed loaded (data-photo set by JS) */
-.team-avatar[data-photo]::before {
-  display: none;
-}
-
-/* Photo fills the circle */
+.team-avatar::before { content: attr(data-initials); }
 .team-avatar img {
   position: absolute;
   inset: 0;
@@ -980,6 +970,7 @@ header {
   object-fit: cover;
   object-position: center top;
 }
+.team-avatar:has(img)::before { display: none; }
 
 .team-linkedin {
   display: flex;
