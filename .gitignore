@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if a build step is ever added)
+node_modules/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Claude Code
+.claude/settings.local.json
