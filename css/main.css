@@ -957,11 +957,19 @@ header {
   font-weight: 600;
   color: var(--color-navy);
   transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-avatar::before { content: attr(data-initials); }
-.team-avatar { position: relative; overflow: hidden; }
-.team-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.team-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 .team-avatar:has(img)::before { display: none; }
 
 .team-linkedin {
